@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout for CreateQuestionBaseDialogActivity class.
+
+    Consists of a title, cancel/ok buttons, and the entire center is
+    a BaseQuestionView.
+
+    todo: this should not be needed, I think.  Perhaps I should make the class Abstract?
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/create_question_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/card_margin"
+    android:padding="@dimen/card_margin"
+    android:background="@color/white">
+
+    <!-- title -->
+    <TextView
+        android:id="@+id/create_question_base_prompt_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="create_question_base.xml, please replace when done with testing."
+        android:textSize="@dimen/text_medium_large"
+        android:textColor="@color/text_darkest"
+        />
+
+    <!-- Button Row at Bottom -->
+    <LinearLayout
+        android:id="@+id/butt_row_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+
+        <View
+            android:id="@+id/left_spacer"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="0.30"
+            />
+
+        <Button
+            android:id="@+id/cancel_butt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".30"
+            android:text="@string/cancel"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@color/colorPrimary"
+            />
+
+        <Button
+            android:id="@+id/ok_butt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".30"
+            android:text="@string/ok"
+            style="?android:attr/buttonBarPositiveButtonStyle"
+            android:textColor="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+    <com.consensus_builder.consensusbuilder.ui.CheckboxQuestionView
+        android:id="@+id/create_question_base_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/create_question_base_prompt_tv"
+        android:layout_above="@id/butt_row_ll"
+        app:createQuestion="true"
+        app:setPromptHint="prompt for your question"
+        android:background="@color/light_gray"
+        />
+
+</RelativeLayout>

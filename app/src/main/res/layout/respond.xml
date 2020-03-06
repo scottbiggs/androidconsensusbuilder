@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Responses to questionnaires are done here.
+-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/respond_bg_color"
+    >
+
+    <TextView
+        android:id="@+id/respond_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:text="@string/response_prompt"
+        android:elevation="4dp"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/respond_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/respond_title_tv"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:background="@color/light_gray"
+        android:scrollbars="vertical"
+        android:paddingTop="@dimen/half_card_margin"
+        />
+
+    <!-- the FAB -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/groups_respond_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/fab_ic_respond" />
+
+</RelativeLayout>

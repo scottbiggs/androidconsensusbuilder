@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.consensus_builder.consensusbuilder">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Note: windowSoftInputMode="adjustPan" forces panning so we can see EditTexts when using soft keyboard -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustPan"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            excludeFromRecents="true" prevents this Activity from appearing
+            in the Recently Used Apps list.
+        -->
+        <activity
+            android:name=".RankDialogActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"
+            android:excludeFromRecents="true"
+            />
+
+        <!-- For adding a new checkbox question -->
+        <activity android:name=".ui.CreateQuestionCheckboxDialogActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"
+            android:excludeFromRecents="true"
+            />
+
+        <!-- For adding a new radio button question -->
+        <activity android:name=".ui.CreateQuestionRadioDialogActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"
+            android:excludeFromRecents="true"
+            />
+
+        <!-- For adding a new ranking question -->
+        <activity android:name=".ui.CreateQuestionRankDialogActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"
+            android:excludeFromRecents="true"
+            />
+
+        <!-- For adding a new freeform question -->
+        <activity android:name=".ui.CreateQuestionFreeformDialogActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"
+            android:excludeFromRecents="true"
+            />
+
+    </application>
+
+</manifest>

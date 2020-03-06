@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout for the freeform activity/dialog for when the user creates questions.
+    Displays all the widgets necessary for a freeform question.
+
+    Actually very simple:
+        title
+        cancel / ok buttons
+        FreeformQuestionView (which holds prompt place for response)
+
+    Uses the custom FreeformQuestionView.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/freeform_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/card_margin"
+    android:padding="@dimen/card_margin"
+    android:background="@color/white">
+
+    <!-- Title (optional) -->
+    <TextView
+        android:id="@+id/freeform_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/qd_freeform_prompt"
+        android:textSize="@dimen/text_medium_large"
+        android:textColor="@color/text_darkest"
+        />
+
+    <!-- Button Row at Bottom -->
+    <LinearLayout
+        android:id="@+id/butt_row_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+
+        <View
+            android:id="@+id/left_spacer"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="0.30"
+            />
+
+        <Button
+            android:id="@+id/cancel_butt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".30"
+            android:text="@string/cancel"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@color/colorPrimary"
+            />
+
+        <Button
+            android:id="@+id/ok_butt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".30"
+            android:text="@string/ok"
+            style="?android:attr/buttonBarPositiveButtonStyle"
+            android:textColor="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+    <com.consensus_builder.consensusbuilder.ui.FreeformQuestionView
+        android:id="@+id/freeform_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/freeform_title_tv"
+        android:layout_above="@id/butt_row_ll"
+        app:createFreeformQuestion="true"
+        app:setFreeformPromptHint="@string/qd_freeform_prompt"
+        android:background="@color/light_gray"
+        />
+
+</RelativeLayout>

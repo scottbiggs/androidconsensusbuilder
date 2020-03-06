@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Users design their questionnaire here.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/questionnaire_fragment_title"
+        android:textSize="@dimen/text_large"
+        android:textColor="@color/text_darkest"
+        android:layout_marginLeft="@dimen/card_margin"
+        android:layout_marginTop="@dimen/half_card_margin"
+        android:layout_marginBottom="@dimen/half_card_margin"
+        />
+
+    <LinearLayout
+        android:id="@+id/add_area_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_tv"
+        android:orientation="horizontal"
+        android:background="@color/medium_gray"
+        >
+
+        <ImageView
+            android:id="@+id/add_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_white_plus"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginRight="@dimen/card_margin"
+            android:contentDescription="@string/qd_plus_content_desc"
+            />
+
+        <TableLayout
+            android:id="@+id/button_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <Button
+                    android:id="@+id/questionnaire_add_checkbox"
+                    android:text="@string/qtype_check_box"
+                    />
+                <Button
+                    android:id="@+id/questionnaire_add_radio"
+                    android:text="@string/qtype_radio"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?android:buttonBarStyle"
+                >
+                <Button
+                    android:id="@+id/questionnaire_add_rank"
+                    android:text="@string/qtype_ranking"
+                    />
+                <Button
+                    android:id="@+id/questionnaire_add_freeform"
+                    android:text="@string/qtype_freeform"
+                    />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/questionnaire_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_area_ll"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:scrollbars="vertical"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/questionnaire_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/mini_fab_margin"
+        app:fabSize="normal"
+        android:src="@drawable/ic_menu_send" />
+
+</RelativeLayout>

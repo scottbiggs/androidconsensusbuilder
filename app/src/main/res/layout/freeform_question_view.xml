@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    This layout is for an entire FreeformQuestionView.  Heavily drawn from
+    base_question_view.xml.
+
+    Creating a Question or Answering a Freeform Question?  This View works for
+    both cases.
+
+    For example, the Prompt can be constructed/changed by someone
+    making the question (and EditText), but is a TextView for
+    anyone answering the question.
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <!-- Image (if used) -->
+        <ImageView
+            android:id="@+id/freeform_question_image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            android:visibility="gone"
+            />
+
+        <!--
+            Main prompt for Question. Either the TextView or the
+            EditText will display, never both.  Depends on whether
+            the question is being constructed or answered (see the
+            setState attribute).
+        -->
+        <TextView
+            android:id="@+id/freeform_question_prompt_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/half_card_margin"
+            android:textSize="@dimen/text_medium_large"
+            android:textColor="@color/text_darkest"
+            android:text="temp"
+            />
+        <EditText
+            android:id="@+id/freeform_question_prompt_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/text_darkest"
+            android:visibility="gone"
+            android:textColorHint="@color/text_gray"
+            />
+
+    </RelativeLayout>
+
+    <!-- This is where users typs in an answer. Only visible if createQuestion is false. -->
+    <EditText
+        android:id="@+id/freeform_question_answer_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:hint="@string/freeform_default_answer_hint"
+        />
+
+</LinearLayout>

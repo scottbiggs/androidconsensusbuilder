@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    This layout is for an entire BaseQuestionView.
+
+    Creating a Question or Answering a Question.  This View works for
+    both case.
+
+    For example, the Prompt can be constructed/changed by someone
+    making the question (and EditText), but is a TextView for
+    anyone answering the question.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <!-- Image (if used) -->
+        <ImageView
+            android:id="@+id/base_question_image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            android:visibility="gone"
+            />
+
+        <!--
+            Main prompt for Question. Either the TextView or the
+            EditText will display, never both.  Depends on whether
+            the question is being constructed or answered (see the
+            setState attribute).
+        -->
+        <TextView
+            android:id="@+id/base_question_prompt_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/half_card_margin"
+            android:textSize="@dimen/text_medium_large"
+            android:textColor="@color/text_darkest"
+            android:text="temp"
+            />
+        <EditText
+            android:id="@+id/base_question_prompt_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/text_darkest"
+            android:visibility="gone"
+            android:textColorHint="@color/text_gray"
+            />
+
+    </RelativeLayout>
+
+    <!-- recycler view section -->
+    <RelativeLayout
+        android:id="@+id/recycler_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- The items of this RecyclerView are described in base_question_view_recycler_card.xml -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/base_question_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:background="@color/light_gray"
+            />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/card_margin"
+            app:fabSize="mini"
+            android:src="@drawable/ic_white_plus" />
+    </RelativeLayout>
+
+</LinearLayout>

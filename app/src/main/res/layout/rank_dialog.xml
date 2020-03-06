@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Defines the dialog that pops up when the user performs a ranking.
+-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/light_gray"
+    android:theme="@style/AppTheme"
+    >
+
+    <TextView
+        android:id="@+id/rank_dialog_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/rank_prompt"
+        android:textSize="@dimen/text_medium_large"
+        android:layout_marginLeft="@dimen/card_margin"
+        android:layout_marginRight="@dimen/card_margin"
+        android:layout_marginTop="@dimen/card_margin"
+        android:textColor="@color/text_dark"
+        />
+
+    <!-- Button Row at Bottom -->
+    <LinearLayout
+        android:id="@+id/rank_dialog_butt_row_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+
+        <View
+            android:id="@+id/left_spacer"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="0.30"
+            />
+
+        <Button
+            android:id="@+id/rank_dialog_cancel_butt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".30"
+            android:text="@string/cancel"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@color/colorPrimary"
+            />
+
+        <Button
+            android:id="@+id/rank_dialog_ok_butt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".30"
+            android:text="@string/ok"
+            style="?android:attr/buttonBarPositiveButtonStyle"
+            android:textColor="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rank_dialog_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rank_dialog_title_tv"
+        android:layout_above="@id/rank_dialog_butt_row_ll"
+        android:layout_marginLeft="@dimen/half_card_margin"
+        android:layout_marginRight="@dimen/half_card_margin"
+        android:layout_marginTop="@dimen/card_margin"
+        android:layout_marginBottom="@dimen/card_margin"
+        />
+
+
+</RelativeLayout>

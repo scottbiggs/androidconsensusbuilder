@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout for each item of the BaseQuestionView's recycler.
+-->
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    style="@style/CardView.Light"
+    >
+
+    <!-- for some reason, this needs to be manually set to the correct styles -->
+    <!-- todo: investigate! -->
+    <EditText
+        android:id="@+id/base_question_card_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_gravity="center"
+        android:hint="@string/input_line_hint"
+        android:textColorHint="@color/text_gray"
+        android:textColor="@color/text_darkest"
+        />
+
+    <ImageView
+        android:id="@+id/base_question_card_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        />
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Need to make changes to the MainActivity's layout? My dear
+    my long lost traveler, welcome! you've come to the right
+    place.  The other layouts you looked at only dealt with
+    items that "float" on top of this layout.  The CONTENT
+    of the main activity resides here.
+
+    Right now, this is just a ViewPager!  Psych!  You probably
+    will have to look even harder to get to the layout that
+    you want.  Heehee.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.consensus_builder.consensusbuilder.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+
+    <!-- todo: this may be redundantly nested within the RelativeLayout -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/content_main_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <android.support.v4.view.PagerTitleStrip
+            android:id="@+id/content_main_vptitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@color/colorPrimaryDark"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/text_lightest"
+            style="@style/viewPagerTitleStripStyle"
+            />
+
+    </android.support.v4.view.ViewPager>
+
+
+</RelativeLayout>

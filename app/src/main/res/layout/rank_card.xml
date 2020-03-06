@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout for each item in the RecyclerView that allows users to
+    rank things.  This layout is one of those things.  Some people
+    call this a Card, some call it an item.  For now, it's just
+    a String.
+
+    NOTE: this layout MUST match the data in RankCardViewHolder class
+    EXACTLY!!!
+-->
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/half_card_margin"
+    android:layout_marginBottom="@dimen/half_card_margin"
+    android:layout_marginLeft="@dimen/card_margin"
+    android:layout_marginRight="@dimen/card_margin"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardBackgroundColor="@android:color/white"
+    card_view:cardElevation="2dp"
+    >
+
+    <!-- Displays the String for this card. -->
+    <TextView
+        android:id="@+id/rank_card_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/half_card_margin"
+        android:layout_marginBottom="@dimen/half_card_margin"
+        android:layout_marginLeft="@dimen/card_margin"
+        android:layout_marginRight="@dimen/card_margin"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/text_medium_large"
+        />
+
+    <!--
+        If an Image is associated with this item, it's displayed
+        here.
+    -->
+    <ImageView
+        android:id="@+id/rank_card_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+</android.support.v7.widget.CardView>

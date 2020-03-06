@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- BaseQuestionView -->
+    <declare-styleable name="BaseQuestionView">
+        <!-- Most fundamental: are we CREATING a question or ANSWERING a question (default)? -->
+        <attr name="createQuestion" format="boolean" />
+
+        <!-- The primary Question posed to the answerer. -->
+        <attr name="setPrompt" format="string" />
+
+        <!-- Hint to be displayed in the editable portion of the prompt -->
+        <attr name="setPromptHint" format="string" />
+
+        <!-- Background image -->
+        <attr name="setBackground" format="reference" />
+
+        <!-- todo: Layout file to use for the RecyclerView items  -->
+        <attr name="setRecyclerItemLayout" format="reference" />
+
+        <!-- When true (default), the RecyclerView is visible -->
+        <attr name="recyclerVisible" format="boolean" />
+
+        <!-- When true (default), the user may add items to the recycler -->
+        <attr name="recyclerAddable" format="boolean" />
+
+        <!-- When true (default), the user may delete items from the recycler -->
+        <attr name="recyclerDeletable" format="boolean" />
+
+        <!-- When true (default), the user may rearrange items in the recycler -->
+        <attr name="recyclerRearrangeable" format="boolean" />
+
+    </declare-styleable>
+
+
+    <!-- Attributes for the Checkbox custom widget -->
+    <declare-styleable name="CheckboxQuestionView">
+        <!-- When creating a question, we must Edit it. When responding (default) this should be false. -->
+        <attr name="setEditable" format="boolean" />
+
+        <!-- The primary Question posed to the answerer. They will check all applicable answers. -->
+        <attr name="setCheckboxPrompt" format="string" />
+
+        <!-- Hint to be displayed in the editable portion of the prompt -->
+        <attr name="setCheckboxPromptHint" format="string" />
+
+        <!-- Background image -->
+        <attr name="setCheckboxBackground" format="reference" />
+
+    </declare-styleable>
+
+    <!-- Attributes for the Radio Button custom widget -->
+    <declare-styleable name="RadioQuestionView">
+        <!-- Most fundamental: are we CREATING a radio question or ANSWERING a question (default)? -->
+        <attr name="createRadioQuestion" format="boolean" />
+
+        <!-- The primary Question posed to the answerer. They will check all applicable answers. -->
+        <attr name="setRadioPrompt" format="string" />
+
+        <!-- Hint to be displayed in the editable portion of the prompt -->
+        <attr name="setRadioPromptHint" format="string" />
+
+        <!-- Background image -->
+        <attr name="setRadioBackground" format="reference" />
+
+    </declare-styleable>
+
+    <!-- Attributes for the Ranking custom widget -->
+    <declare-styleable name="RankQuestionView">
+        <!-- Most fundamental: are we CREATING a ranking question or ANSWERING a question (default)? -->
+        <attr name="createRankQuestion" format="boolean" />
+
+        <!-- The primary Question posed to the answerer. They will check all applicable answers. -->
+        <attr name="setRankPrompt" format="string" />
+
+        <!-- Hint to be displayed in the editable portion of the prompt -->
+        <attr name="setRankPromptHint" format="string" />
+
+        <!-- Background image -->
+        <attr name="setRankBackground" format="reference" />
+
+    </declare-styleable>
+
+    <!-- Attributes for the freeform custom widget -->
+    <declare-styleable name="FreeformQuestionView">
+        <!-- Most fundamental: are we CREATING a freeform question or ANSWERING a question (default)? -->
+        <attr name="createFreeformQuestion" format="boolean" />
+
+        <!-- The primary Question posed to the answerer. -->
+        <attr name="setFreeformPrompt" format="string" />
+
+        <!-- Hint to be displayed in the editable portion of the prompt -->
+        <attr name="setFreeformPromptHint" format="string" />
+
+        <!-- Hint to be displayed where users type in answers -->
+        <attr name="setFreeformAnswerHint" format="string" />
+
+        <!-- Background image -->
+        <attr name="setFreeformBackground" format="reference" />
+
+    </declare-styleable>
+
+
+
+</resources>

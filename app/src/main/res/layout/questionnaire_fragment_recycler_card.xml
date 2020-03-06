@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout for each item of the QuestionnaireFragment's recycler.
+
+    Contains each of the custom views (checkbox, radio, rank, and
+    freeform), but only one should be visible at a time.
+-->
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    style="@style/CardView.Light"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/questionnaire_card_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_very_large"
+            android:gravity="center_horizontal"
+            android:textColor="@color/text_darkest"
+            android:text="item #"
+            />
+
+        <com.consensus_builder.consensusbuilder.ui.CheckboxQuestionView
+            android:id="@+id/questionnaire_card_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+        <com.consensus_builder.consensusbuilder.ui.RadioQuestionView
+            android:id="@+id/questionnaire_card_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+        <com.consensus_builder.consensusbuilder.ui.RankQuestionView
+            android:id="@+id/questionnaire_card_rank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+        <com.consensus_builder.consensusbuilder.ui.FreeformQuestionView
+            android:id="@+id/questionnaire_card_freeform"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

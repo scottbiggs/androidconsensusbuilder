@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">ConsensusBuilder</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- General Dialog and Buttons -->
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="cancel">CANCEL</string>
+    <string name="ok">OK</string>
+    <string name="send">SEND</string>
+    <string name="separator">\u0020</string>     <!-- Separates messages.  Just a space for now. -->
+
+    <string name="delete_confirmation">Really delete?</string>
+
+
+    <!-- Tab Titles -->
+    <string name="groups_title">Groups</string>
+    <string name="questionnaire_title">Questionnaire</string>
+    <string name="response_title">Respond</string>
+    <string name="result_title">Analyze</string>
+
+    <!--                  -->
+    <!-- Respond Fragment -->
+    <!--                  -->
+    <string name="response_prompt">Answer some questions and send the response.</string>     <!-- The main title for this page todo: DB! -->
+    <string name="rank_prompt">Drag items, ranking your favorite at the top and your least liked at the bottom</string>
+    <string name="send_incomplete_data">You have not answered all the questions. Send anyway/?</string>
+    <string name="sending_response_msg">Your response is on it\'s way!</string>
+
+    <!-- Question Types (suitable for displaying to users) -->
+    <string name="qtype_check_box">check box</string>
+    <string name="qtype_check_boxes">check boxes</string>
+    <string name="qtype_radio">radio button</string>
+    <string name="qtype_radios">radio buttons</string>
+    <string name="qtype_freeform">question</string>
+    <string name="qtype_ranking">rank</string>
+    <string name="qtype_unknown">unknown question type</string>
+
+    <string name="qtype_number_prefix">#</string>   <!-- What precedes number of each question item in the recyclerView -->
+
+    <string name="checkbox_edit_hint">enter your question here</string>
+
+    <!--                       -->
+    <!-- Questionnaire Builder -->
+    <!--                       -->
+    <string name="questionnaire_fragment_title">Create Questionnaire</string>
+    <string name="qd_checkbox_selection">checkbox - select all, some, or none</string>
+    <string name="qd_radio_selection">radio - select one</string>
+    <string name="qd_rank_selection">rank - modify the order</string>
+    <string name="qd_freeform_selection">question - type an answer</string>
+    <string name="qd_plus_content_desc">add a new question</string>
+
+    <string name="qd_type_prompt">Question Type</string>
+    <string name="qd_checkbox_prompt">Create Checkbox Question</string>
+    <string name="qd_rank_prompt">Enter Items to Rank</string>
+    <string name="qd_radio_prompt">Create Radio Button Question</string>
+    <string name="qd_freeform_prompt">Question or Message</string>
+
+    <string name="qd_freeform_response_prompt_positive">require response</string>
+    <string name="qd_freeform_response_prompt_negative">response optional</string>
+
+    <!-- The different question types -->
+    <string-array name="question_type_spinner">
+        <item>Radio Button</item>
+        <item>Checkbox</item>
+        <item>Ranking</item>
+        <item>Freeform Question</item>
+    </string-array>
+
+    <!-- todo this is a test to make sure the baseQuestionView is working -->
+    <string name="input_line_hint">Input a radio or rank or checkbox line</string>
+
+    <string name="sending_questionnaire_msg">Your Questionnaire is on its way!</string>
+
+    <!--                 -->
+    <!-- Groups Fragment -->
+    <!--                 -->
+
+    <!--                  -->
+    <!-- Results Fragment -->
+    <!--                  -->
+
+    <!--  Creating a Checkbox Question -->
+    <string name="add_checkbox_prompt">Add Checkbox</string>    <!-- Dialog title for adding a new checkbox line -->
+    <string name="add_checkbox_hint">Enter a checkbox text</string> <!-- Hint for the EditText when they enter a new Checkbox line -->
+
+    <!-- Creating a Radio Question -->
+    <string name="add_radio_prompt">Add Radio Button</string>    <!-- Dialog title for adding a new radio line -->
+    <string name="add_radio_hint">Enter a radio button text</string> <!-- Hint for the EditText when they enter a new radio button -->
+
+    <!-- Creating a Ranking Question -->
+    <string name="add_rank_prompt">Rank Items</string>    <!-- Dialog title for adding a new ranking line -->
+    <string name="add_rank_hint">Enter a line to rank</string> <!-- Hint for the EditText when they enter a new line to rank -->
+
+    <!-- Creating a Freeform Question -->
+    <string name="freeform_default_answer_hint">answer here</string> <!-- default hint for the answerer -->
+
+</resources>

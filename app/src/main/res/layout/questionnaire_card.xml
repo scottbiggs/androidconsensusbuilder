@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The layout for each card of the Questionnaire RecyclerView.
+    For performance reasons each widget with an id MUST have a
+    corresponding widget in the QuestionnaireFragment.QuestionViewHolder
+    class!!!!
+
+    Each main portion of this card is unique.  That means that only
+    one of the main widgets should ever be VISIBLE; all the others
+    should be GONE.  That's how it works!
+
+    For debugging purposes, all the widgets are turn on (VISIBLE)
+    by default.  It's up to the java code to turn the unused portions
+    off.
+-->
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/questionnaire_cv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="@dimen/card_margin"
+    android:layout_marginRight="@dimen/card_margin"
+    android:layout_marginTop="@dimen/half_card_margin"
+    android:layout_marginBottom="@dimen/half_card_margin"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardBackgroundColor="@android:color/white"
+    card_view:cardElevation="2dp"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin"
+        >
+
+
+        <TextView
+            android:id="@+id/card_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_very_large"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/text_darkest"
+            android:text="item #"
+            />
+
+        <!-- Checkboxes -->
+        <LinearLayout
+            android:id="@+id/checkboxes_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/checkboxes_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/qtype_check_box"
+                android:textSize="@dimen/text_medium"
+                android:textColor="@color/text_dark"
+                />
+
+            <TextView
+                android:id="@+id/checkboxes_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_medium"
+                android:text="dummy prompt for checkboxes"
+                />
+
+            <!--
+                Will be removed programmatically when the first
+                 checkbox is added.
+            -->
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dummy check box"
+                />
+
+        </LinearLayout>
+
+        <!-- Radio -->
+        <RadioGroup
+            android:id="@+id/radio_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            >
+
+            <TextView
+                android:id="@+id/radio_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/qtype_radio"
+                android:textSize="@dimen/text_medium"
+                android:textColor="@color/text_dark"
+                />
+
+            <TextView
+                android:id="@+id/radio_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_medium"
+                android:text="dummy prompt for radio boxes"
+                />
+
+            <!--
+                Will be removed programmatically when the first radio button is added.
+            -->
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dummy radio button"
+                />
+
+        </RadioGroup>
+
+
+        <!-- Freeform Question -->
+        <LinearLayout
+            android:id="@+id/freeform_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            >
+
+            <TextView
+                android:id="@+id/freeform_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/qtype_freeform"
+                android:textSize="@dimen/text_medium"
+                android:textColor="@color/text_dark"
+                />
+
+            <TextView
+                android:id="@+id/freeform_ask_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dummy question prompt"
+                />
+
+            <!--
+                imeOptions "actionDone" indicate a Done to replace enter key on soft keyboards
+                NOTE: Only works if inputType="text"
+            -->
+            <EditText
+                android:id="@+id/freeform_answer_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:maxLines="3"
+                />
+
+        </LinearLayout>
+
+
+        <!-- Ranking -->
+        <LinearLayout
+            android:id="@+id/rank_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            >
+
+            <TextView
+                android:id="@+id/ranking_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/qtype_ranking"
+                android:textSize="@dimen/text_medium"
+                android:textColor="@color/text_dark"
+                />
+
+            <TextView
+                android:id="@+id/ranking_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_medium"
+                android:text="dummy prompt for ranking lines"
+                />
+
+            <!--
+                NOTE rankings are added programmatically
+                This will be removed automatically when the
+                first Ranking line is added.
+            -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dummy ranking 1"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+
+
